@@ -8,3 +8,28 @@
   <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header_inner">
+      <h1>Daily</h1>
+      <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="reflections.html">My Reflections</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h2 class="visually-hidden">Inspiration</h2>
+    <section class="filter-row"></section>
+      <label for="type">Type</label>
+      <select id="type" name="type"></select>
+        <option value="scriptures">Scriptures</option>
+        <option value="quotes">Quotes</option>
+      </select>
+      <button type="button">try Inspiration</button>
+    </section>
+
+    <article class="card fade" aria-live="polite"></article>

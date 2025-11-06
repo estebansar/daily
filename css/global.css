@@ -7,3 +7,9 @@ body {
     color: var(--primary);
     line-height: 1.6;
 }
+
+main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: ca;
+}

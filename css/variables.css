@@ -1,0 +1,12 @@
+/*lets do the variables. Katherine, let me know what you think of this*/
+
+:root {
+    --primary:#4A5A48;
+    --secondary: #f6f3e8;
+    --accent1: #c5a777;
+    --accent2: #8a9776;
+    --font-head: 'Montserrat' , sans-serif;
+    --font-body: 'Open Sans' , sans-serif;
+    --maxw: 900px;
+    --space: 1rem;
+}

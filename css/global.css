@@ -14,3 +14,22 @@ main {
     padding: 1.5rem 1rem;
 }
 
+/*the links and buttons*/
+
+a {
+    color: var(--accent1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, .btn {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--accent1);
+    border-radius: 6px;
+    background-color: #fff;
+    color: var(--primary);
+}

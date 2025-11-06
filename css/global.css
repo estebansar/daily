@@ -1,0 +1,9 @@
+*{box-sizing: border-box;}
+html, ody {margin: 0; padding: 0;}
+
+body {
+    font-family: var(--forn-body);
+    background-color: var(--secondary);
+    color: var(--primary);
+    line-height: 1.6;
+}

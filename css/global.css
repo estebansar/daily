@@ -9,7 +9,8 @@ body {
 }
 
 main {
-    max-width: var(--maxw);
+    max-width: var(--container);
     margin: 0 auto;
-    padding: ca;
+    padding: 1.5rem 1rem;
 }
+

@@ -1,0 +1,30 @@
+header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--accent2);
+}
+
+.header_inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--space);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space);
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+nav a {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+nav a.active {
+    background-color: var(--accent2);
+    color: #fff;
+}

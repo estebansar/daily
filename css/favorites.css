@@ -1,0 +1,17 @@
+.hint {
+    opacity: 0.85;
+    margin-bottom: var(--space);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+.fav-item {
+    background-color: #fff;
+    border: 1px solid var(--accent2);
+    border-radius: 9px;
+    padding: var(--space);
+}

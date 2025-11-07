@@ -1,14 +1,19 @@
 footer {
     border-top: 1px solid var(--accent2);
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: #fff;
 }
 
 .footer_inner {
     max-width: var(--container);
     margin: 0 auto;
-    padding: var(--container);
+    padding: 0.75rem 1rem; /*mistake corrected, it was using --container*/
     margin: 0 auto;
     font-size: 0.9rem;
     color: lightslategray;
+    text-align: center;
+}
+
+.footer_inner p {
+    margin: 0; /*removes extra paragrpah spacing*/
 }

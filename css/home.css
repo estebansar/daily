@@ -16,3 +16,14 @@
     padding: var(--space);
 }
 
+.card .meta {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+.actions {
+    margin-top: var(--space);
+    display: flex;
+    gap: var(--space);
+    flex-wrap: wrap;  /*keep buttons in small screen*/
+}

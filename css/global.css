@@ -2,14 +2,14 @@
 html, ody {margin: 0; padding: 0;}
 
 body {
-    font-family: var(--forn-body);
+    font-family: var(--font-body);
     background-color: var(--secondary);
     color: var(--primary);
     line-height: 1.6;
     /* lets keep footer at hte bottom evne when the content is short(these 3 below) */
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; */   /*lets remove this, it didnt make any change, lets just the footer adjust after the content*/
 }
 
 main {
@@ -17,7 +17,7 @@ main {
     margin: 0 auto;
     padding: 1.5rem 1rem;
     /*let main area take remaining space */
-    flex: 1;
+    /*flex: 1;*/ /*same here lets remove this*/ 
 }
 
 /*the links and buttons*/

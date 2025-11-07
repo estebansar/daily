@@ -1,0 +1,18 @@
+.filter-row {
+    gap: var(--space);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-row label {
+    min-width: 50px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--accent2);
+    border-radius: 10px;
+    padding: var(--space);
+}
+

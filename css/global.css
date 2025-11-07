@@ -34,3 +34,19 @@ button, .btn {
     color: var(--primary);
 }
 
+.btnbtn-outline {
+    background-color: transparent;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: #fff;
+    border: 1px solid var(--accent2);
+    padding: 0.25rem 0.5rem;
+}

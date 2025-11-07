@@ -1,0 +1,23 @@
+form > * {
+    margin-bottom: 0.75rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--accent2);
+    border-radius: 6px;
+    background-color: #fff;
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.status {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}

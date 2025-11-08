@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   function initReflections(){
-    var form = document.getElementById("reflection-form"); // ❌
+    var form = document.getElementById("reflection-form"); 
     var title = document.getElementById("ref-title");
     var text = document.getElementById("ref-text");
     var list = document.getElementById("reflections-list");
@@ -99,3 +99,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
     draw();
   }
+
+  function renderItem(container, item){
+    if (!item){ container.innerHTML = "<p>No item found.</p>"; return; }
+    var html = ''
+      + '<article class="card fade-in">'
+      +   '<h3>' + item.title + '</h3>'
+      +   '<p>' + item.text + '</p>'
+      +   (item.author ? '<p><em>' + item.author + '</em></p>' : '')
+      +   (item.reference ? '<p><strong>' + item.reference + '</strong></p>' : '')
+      +   '<button class="btn btn-fav" data-id="' + item.id + '" data-type="' + item.type + '">Save to Favorites</button>'
+      + '</article>';
+    container.innerHTML = html;
+  }
+
+  function renderList(items, showRemove){
+    if (!items || items.length===0) return "<p>Nothing saved yet.</p>";
+    var html = "";
+    for (var i=0;i<items.length;i++){
+      var it = items[i];
+      html += ''
+        + '<article class="card fade-in">'
+        +   '<h3>' + (it.title || "Inspiration") + '</h3>'
+        +   (it.text ? '<p>' + it.text + '</p>' : '')
+        +   (showRemove ? '<button class="btn btn-remove" data-id="' + (it.id||i) + '" data-type="' + (it.type||"") + '">Remove</button>' : '')
+        + '</article>';
+    }
+    return html;
+  }
+});

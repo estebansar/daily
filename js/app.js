@@ -61,5 +61,41 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
   }
-                                       
+                       
+  function initFavorites(){
+    var box = document.getElementById("favorites-list");
+    function draw(){
+      var items = getFavorites();
+      box.innerHTML = renderList(items, true);
+    }
+    document.addEventListener("click", function(e){
+      var b = e.target;
+      if (!b.classList || !b.classList.contains("btn-remove")) return;
+      removeFavorite(Number(b.getAttribute("data-id")), b.getAttribute("data-type"));
+      draw();
+    });
+    draw();
+  }
 
+  function initReflections(){
+    var form = document.getElementById("reflection-form"); // ❌
+    var title = document.getElementById("ref-title");
+    var text = document.getElementById("ref-text");
+    var list = document.getElementById("reflections-list");
+
+    function draw(){
+      var rs = getReflections(), items=[];
+      for (var i=0;i<rs.length;i++){ items.push({ id:i, title:rs[i].title, text:rs[i].text }); }
+      list.innerHTML = renderList(items, false);
+    }
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var t = title.value.trim(), x = text.value.trim();
+      if (t.length<3 || x.length<5){ alert("Please write a clear title and message."); return; }
+      addReflection({ title:t, text:x, date:new Date().toISOString() });
+      form.reset(); draw();
+    });
+
+    draw();
+  }

@@ -37,7 +37,7 @@ export function removeFavorite(id, type) {
 //refelctions
 
 export function getReflections() { return load(REF_KEY); }
-export function addReflections(r) {
+export function addReflection(r) {
     var list = load(REF_KEY);
     list.push(r);
     save(REF_KEY, list);

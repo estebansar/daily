@@ -1,5 +1,5 @@
-const SCRIPTURES_JSON = "./data/scriptures.json";
-const QUOTES_JSON = "./data/quotes.json";
+const SCRIPTURES = "./data/scriptures.json";
+const QUOTES = "./data/quotes.json";
 
 export async function fetchAll() {   //get all data and return it to app.js
     const s = await fetch(SCRIPTURES);

@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function(){
       +   '<h3>' + item.title + '</h3>'
       +   '<p>' + item.text + '</p>'
       +   (item.author ? '<p><em>' + item.author + '</em></p>' : '')
-      +   (item.reference ? '<p><strong>' + item.reference + '</strong></p>' : '')
+      //+   (item.reference ? '<p><strong>' + item.reference + '</strong></p>' : '')
       +   '<button class="btn btn-fav" data-id="' + item.id + '" data-type="' + item.type + '">Save to Favorites</button>'
       + '</article>';
     container.innerHTML = html;

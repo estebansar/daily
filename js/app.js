@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var list = document.getElementById("reflections-list");
 
   function draw() {
-    var rs = getReflections();       
+    var rs = JSON.parse(localStorage.getItem('sr_reflections') || '[]'); // read directly       
      var html = "";
 
     if (!rs || rs.length === 0) {

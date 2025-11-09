@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function(){
   }
                        
   function initFavorites(){
+    var box = document.getElementById("favorites-list");
+    
   function draw() {
     var favs = JSON.parse(localStorage.getItem('sr_favorites') || '[]'); // read directly
     var html = '';
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     box.innerHTML = html;
   }
-  
+
     document.addEventListener("click", function(e){
       var b = e.target;
       if (!b.classList || !b.classList.contains("btn-remove")) return;

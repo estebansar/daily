@@ -83,11 +83,26 @@ document.addEventListener("DOMContentLoaded", function(){
     var text = document.getElementById("ref-text");
     var list = document.getElementById("reflections-list");
 
-    function draw(){
-      var rs = getReflections(), items=[];
-      for (var i=0;i<rs.length;i++){ items.push({ id:i, title:rs[i].title, text:rs[i].text }); }
-      list.innerHTML = renderList(items, false);
+  function draw() {
+    var rs = getReflections();       
+     var html = "";
+
+    if (!rs || rs.length === 0) {
+      list.innerHTML = "<p>Nothing saved yet.</p>";
+      return;
     }
+
+    for (var i = 0; i < rs.length; i++) {
+      var it = rs[i];
+      html += ''
+        + '<article class="card fade-in">'
+        +   '<h3>' + (it.title || "Reflection") + '</h3>'
+        +   '<p>' + (it.text || "") + '</p>'
+         + '</article>';
+    }
+
+  list.innerHTML = html;
+}
 
     form.addEventListener("submit", function(e){
       e.preventDefault();

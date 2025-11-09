@@ -25,23 +25,25 @@
   <main id="main">
     <h2>Reflections</h2>
 
-    <form id="reflections">
+    <form id="reflection-form">
         <label for="category">category</label>
-        <select id="category"> <required>
+        <select id="category">
             <option value="">choose one..</option>
             <option value="scriptures">scriptures</option>
             <option value="quote">Quote</option>
         </select>
 
         <label for="title">title</label>
-        <input id="title" required minlength="3" maxlength="100">
+        <input id="ref-title" required minlength="3" maxlength="100">
 
         <label for="text">reflections</label>
-        <textarea id="text" required minlength="10"></textarea>
+        <textarea id="ref-text" required minlength="10"></textarea>
 
         <button type="submit">Save Reflections</button>
         <p class="status">This will have saved reflections</p>
     </form>
+    <h3>Saved</h3>
+    <section id="reflections-list" aria-live="polite"></section>
   </main>
 
   <footer>

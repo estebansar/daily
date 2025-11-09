@@ -63,11 +63,29 @@ document.addEventListener("DOMContentLoaded", function(){
   }
                        
   function initFavorites(){
-    var box = document.getElementById("favorites-list");
-    function draw(){
-      var items = getFavorites();
-      box.innerHTML = renderList(items, true);
+  function draw() {
+    var favs = JSON.parse(localStorage.getItem('sr_favorites') || '[]'); // read directly
+    var html = '';
+
+    if (!favs || favs.length === 0) {
+      box.innerHTML = "<p>Nothing saved yet.</p>";
+      return;
     }
+
+    for (var i = 0; i < favs.length; i++) {
+      var it = favs[i];
+      html += ''
+        + '<article class="card fade-in">'
+        +   '<h3>' + (it.title || "Inspiration") + '</h3>'
+        +   '<p>' + (it.text || "") + '</p>'
+        +   (it.reference ? '<p><strong>' + it.reference + '</strong></p>' : '')
+        +   '<button class="btn btn-remove" data-id="' + (it.id || i) + '" data-type="' + (it.type || "") + '">Remove</button>'
+        + '</article>';
+    }
+
+    box.innerHTML = html;
+  }
+  
     document.addEventListener("click", function(e){
       var b = e.target;
       if (!b.classList || !b.classList.contains("btn-remove")) return;

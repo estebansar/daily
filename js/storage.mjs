@@ -3,7 +3,7 @@ var REF_KEY = "sr_reflections";
 
 function load(key) {
     try{
-        return JSON.parse(localStorage.getItem(Key) || "[]");
+        return JSON.parse(localStorage.getItem(key) || "[]");
     }   catch (e) {
         return [];
     }
@@ -17,7 +17,7 @@ function save(key, arr) {
 export function getFavorites() { return load(FAV_KEY); }
 export function addFavorite(item) {
     var list = load(FAV_KEY);
-    for (var i=0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         if (list[i].id === item.id && list[i].type === item.type) return list;
     }
     list.push(item)
@@ -34,7 +34,7 @@ export function removeFavorite(id, type) {
     return keep;
 }
 
-//refelctions
+//reflections
 
 export function getReflections() { return load(REF_KEY); }
 export function addReflection(r) {

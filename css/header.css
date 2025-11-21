@@ -47,13 +47,12 @@ nav a.active {
 }
 
 @media (max-width: 700px) {
-
   .menu-toggle {
     display: block; /* show on mobile */
   }
 
   #nav-menu {
-    display: none;
+    display: none;          /* hide links when not open */
     flex-direction: column;
     background-color: #fff;
     padding: 1rem;

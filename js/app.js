@@ -99,11 +99,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       for (var i = 0; i < favs.length; i++) {
         var it = favs[i];
+
+        var title = it.title || it.reference || "Inspiration";
+        var refText = it.reference || "";
+        var showRef = refText && refText !== title;
+
         html += ""
           + '<article class="card fade-in">'
-          +   "<h3>" + (it.title || "Inspiration") + "</h3>"
+          +   "<h3>" + title + "</h3>"
           +   "<p>" + (it.text || "") + "</p>"
-          +   (it.reference ? "<p><strong>" + it.reference + "</strong></p>" : "")
+          +   (showRef ? "<p><strong>" + refText + "</strong></p>" : "")
           +   '<button class="btn btn-remove" data-id="' + (it.id || i) + '" data-type="' + (it.type || "") + '">Remove</button>'
           + "</article>";
       }

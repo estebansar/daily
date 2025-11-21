@@ -8,7 +8,7 @@
 
 }
 
-.list {
+#favorites-list {
     display: flex;
     max-width: 40rem;
     margin: 0 auto var(--space);
@@ -17,7 +17,7 @@
     padding: 0 var(--space);
 }
 
-.list .card {
+#favorites-list .card {
     background-color: #fff;
     border: 1px solid var(--accent2);
     border-radius: 9px;
@@ -27,7 +27,7 @@
 
 /* Title inside the card */
 
-.list .card h3 {
+#favorites-list .card h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }

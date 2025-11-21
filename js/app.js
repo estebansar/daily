@@ -198,4 +198,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     return html;
   }
+
+  // -----PArt-4 -------
+  // Mobile menu toggle (hamburger)
+
+  const menuToggle = document.querySelector("#menu-toggle");
+  const navMenu    = document.querySelector("#nav-menu"); 
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  }  
+
 });

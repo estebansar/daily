@@ -7,6 +7,8 @@ import {
 document.addEventListener("DOMContentLoaded", function () {
   var page = document.body.getAttribute("data-page");
 
+  setActiveNav(page);
+
   if (page === "home") initHome();
   if (page === "favorites") initFavorites();
   if (page === "reflections") initReflections();
@@ -204,6 +206,32 @@ document.addEventListener("DOMContentLoaded", function () {
     return html;
   }
 
+  
+
+  // Highlight the correct nav link
+
+  function setActiveNav(page) {
+    var nav = document.getElementById("nav-menu");
+    if (!nav) return;
+
+    var links = nav.querySelectorAll("a");
+
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      link.classList.remove("active");
+
+      var href = link.getAttribute("href") || "";
+
+      if (
+        (page === "home" && href.includes("index.html")) ||
+        (page === "favorites" && href.includes("favorites.html")) ||
+        (page === "reflections" && href.includes("reflections.html"))
+      ){
+        link.classList.add("active");
+      }
+    }
+  }
+
   // -----PArt-4 -------
   // Mobile menu toggle (hamburger)
 
@@ -214,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.addEventListener("click", () => {
       navMenu.classList.toggle("show");
     });
-  }  
+  }
+
 
 });

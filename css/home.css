@@ -27,3 +27,23 @@
     gap: var(--space);
     flex-wrap: wrap;  /*keep buttons in small screen*/
 }
+
+/*-----part 4----*/
+/*-----css purpose of the page----*/
+
+.purpose-text {
+  max-width: 40rem;
+  margin: 0 auto var(--space);
+  padding: 0 var(--space);
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/*-----making the title to stay in the middle----*/
+
+#main h2 {
+  text-align: center;
+}
+

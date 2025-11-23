@@ -38,12 +38,10 @@
   font-size: 1.05rem;
   opacity: 0.9;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
 }
 
 /*-----making the title to stay in the middle----*/
 
-#main h2 {
-  text-align: center;
-}
+
 

@@ -21,3 +21,64 @@ textarea {
     font-size: 0.95rem;
     opacity: 0.9;
 }
+
+
+/* part4------fixing layout and styling-----*/
+
+/* Center form and saved list, limit width */
+
+#reflection-form,
+#reflections-list {
+  max-width: 40rem;
+  margin: 0 auto var(--space);
+  padding: 0 var(--space);
+}
+
+/* Make the form look like a card */
+#reflection-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid var(--accent2);
+  border-radius: 9px;
+  padding: var(--space);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Labels a bit stronger */
+#reflection-form label {
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* Button style (uses existing button element) */
+#reflection-form button {
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  background: var(--accent2);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#reflection-form button:hover {
+  background: var(--accent1);
+}
+
+/* Saved reflections as cards */
+#reflections-list .card {
+  background: #fff;
+  border: 1px solid var(--accent2);
+  border-radius: 9px;
+  padding: var(--space);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: var(--space);
+}
+
+#reflections-list .card h3 {
+  margin-top: 0;
+}

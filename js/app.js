@@ -111,7 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
           +   "<h3>" + title + "</h3>"
           +   "<p>" + (it.text || "") + "</p>"
           +   (showRef ? "<p><strong>" + refText + "</strong></p>" : "")
-          +   '<button class="btn btn-remove" data-id="' + (it.id || i) + '" data-type="' + (it.type || "") + '">Remove</button>'
+          +   '<div class="card-actions">'
+          +     '<a class="btn btn-details" href="details.html?id=' + (it.id || i) + '&type=' + (it.type || "") + '">View details</a>'
+          +     '<button class="btn btn-remove" data-id="' + (it.id || i) + '" data-type="' + (it.type || "") + '">Remove</button>'
+          +   "</div>"
           + "</article>";
       }
 

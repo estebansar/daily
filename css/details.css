@@ -41,4 +41,53 @@
   padding: 0 1rem;
 }
 
+/* Header row with title + back link */
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.details-header h2 {
+  margin: 0;
+}
+
+/* Back link look like a subtle button */
+
+.back-link {
+  text-decoration: none;
+  border: 1px solid #8a9776;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #43553f; 
+}
+
+.back-link:hover {
+  background-color: #f6f2e8;
+}
+
+.details-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  line-height: 1.5;
+}
+
+.details-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.details-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.details-text {
+  margin-bottom: 1rem;
+}
 

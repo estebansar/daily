@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (page === "home") initHome();
   if (page === "favorites") initFavorites();
   if (page === "reflections") initReflections();
+  if (page === "details") initDetails(); // part 5_NEW
 
   //Home//
   function initHome() {
@@ -247,5 +248,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
 });
+

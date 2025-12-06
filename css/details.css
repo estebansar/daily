@@ -32,3 +32,13 @@
   display: inline-block;
   margin-top: 0.75rem;
 }
+
+/* part 5_Layout wrapper for details page */
+
+.details-layout {
+  max-width: 700px;  
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+

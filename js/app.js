@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (
         (page === "home" && href.includes("index.html")) ||
-        (page === "favorites" && href.includes("favorites.html")) ||
+        ((page === "favorites" || page === "details") && href.includes("favorites.html")) ||
         (page === "reflections" && href.includes("reflections.html"))
       ){
         link.classList.add("active");

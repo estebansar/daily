@@ -135,6 +135,18 @@ document.addEventListener("DOMContentLoaded", function () {
     draw();
   }
 
+  // part 5_ DETAILS
+  function initDetails() {
+    var box = document.getElementById("details");
+    if (!box) return;
+
+  var params = new URLSearchParams(window.location.search);
+  var idParam = params.get("id");
+  var type    = params.get("type") || "";
+
+  // part 5_ If the URL is wrong or missing parameters
+
+
   // REFLECTIONS
   function initReflections() {
     var form = document.getElementById("reflection-form");

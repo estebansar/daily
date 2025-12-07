@@ -157,7 +157,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Convert id to a number
   var id = Number(idParam);
 
+  // Look for this favorite in localStorage
+  var favs = getFavorites(); // uses the import at the top
+  var found = null;
+
   
+
+
 
   // part5_ Build a nice details card
   var title   = found.title || found.reference || "Inspiration";

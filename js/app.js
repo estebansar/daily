@@ -154,6 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  // Convert id to a number
+  var id = Number(idParam);
+
+  
+
   // part5_ Build a nice details card
   var title   = found.title || found.reference || "Inspiration";
   var refText = found.reference || "";

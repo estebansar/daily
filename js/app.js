@@ -145,6 +145,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var type    = params.get("type") || "";
 
   // part 5_ If the URL is wrong or missing parameters
+  if (!idParam) {
+    box.innerHTML = ''
+      + '<article class="card fade-in details-card">'
+      +   '<h3>Not found</h3>'
+      +   '<p>This inspiration is no longer saved in your favorites.</p>'
+      + '</article>';
+    return;
+  }
+
+  // part5_ Build a nice details card
+  var title   = found.title || found.reference || "Inspiration";
+  var refText = found.reference || "";
+  var showRef = refText && refText !== title;
+
+  
 
 
   // REFLECTIONS

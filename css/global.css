@@ -13,11 +13,9 @@ body {
 }
 
 main {
-    max-width: var(--container);
-    margin: 0 auto;
-    padding: 1.5rem 1rem;
-    /*let main area take remaining space */
-    /*flex: 1;*/ /*same here lets remove this*/ 
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem; 
 }
 
 /*the links and buttons*/

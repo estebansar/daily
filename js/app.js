@@ -161,9 +161,26 @@ document.addEventListener("DOMContentLoaded", function () {
   var favs = getFavorites(); // uses the import at the top
   var found = null;
 
-  
+  for (var i = 0; i < favs.length; i++) {
+    var it     = favs[i];
+    var itId   = (typeof it.id === "number" ? it.id : i);
+    var itType = it.type || "";
 
+    if (itId === id && itType === type) {
+      found = it;
+      break;
+    }
+  }
 
+  // If not found in favorites
+  if (!found) {
+    box.innerHTML = ''
+      + '<article class="card fade-in details-card">'
+      +   '<h3>Not found</h3>'
+      +   '<p>This inspiration is no longer saved in your favorites.</p>'
+      + '</article>';
+    return;
+  }
 
   // part5_ Build a nice details card
   var title   = found.title || found.reference || "Inspiration";

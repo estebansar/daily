@@ -159,8 +159,27 @@ document.addEventListener("DOMContentLoaded", function () {
   var refText = found.reference || "";
   var showRef = refText && refText !== title;
 
-  
+  // Label based on type ("bible" / "lds")
+  var sourceLabel = "";
+  if (type === "bible") sourceLabel = "Bible (KJV)";
+  if (type === "lds")   sourceLabel = "Book of Mormon";
 
+  box.innerHTML = ""
+    + '<article class="card fade-in details-card">'
+    +   "<h3>" + title + "</h3>"
+    +   (showRef
+          ? '<p class="details-meta"><strong>' + refText + "</strong></p>"
+          : "")
+    +   '<p class="details-text">' + (found.text || "") + "</p>"
+    +   (sourceLabel
+      ? '<p class="details-meta"><strong>Source:</strong> ' + sourceLabel + "</p>"
+      : "")
+    +   (found.author
+      ? '<p class="details-meta"><strong>Author:</strong> ' + found.author + "</p>"
+      : "")
+    + "</article>";
+    }
+    // END of part 5
 
   // REFLECTIONS
   function initReflections() {

@@ -80,7 +80,7 @@ export async function fetchAllowedScriptures() {
     //Add Bible verses here//
     const bibleAllow = [
         "Jeremiah 17:7",
-        "Psalm 34:4",
+        "Psalms 34:4",
         "Romans 15:13",
         "John 14:27"
     ];

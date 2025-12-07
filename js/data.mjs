@@ -25,27 +25,12 @@ export async function fetchAll() {   //get all data and return it to app.js
     //return list[i];
 //}
 
-export function randomItem(list, key) {
+
+
+// part 5_ Simple random selection: just pick any item from the list
+
+export function randomItem(list) {
     if (!Array.isArray(list) || list.length === 0) return null;
-
-    const seenKey = `seen:${key}`;
-    let seen = [];
-    try {
-        seen = JSON.parse(localStorage.getItem(seenKey)) || [];
-    } catch {}
-
-    const unseen = list.filter(item => !seen.includes(item.id));
-
-    if (unseen.length === 0) {
-        localStorage.removeItem(seenKey);
-        return randomItem(list, key);
-    }
-
-    const randomIndex = Math.floor(Math.random() * unseen.length);
-    const choice = unseen[randomIndex];
-
-    seen.push(choice.id);
-    localStorage.setItem(seenKey, JSON.stringify(seen));
-
-    return choice;
+    var index = Math.floor(Math.random() * list.length);
+    return list[index];
 }

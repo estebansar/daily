@@ -14,6 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
   if (page === "reflections") initReflections();
   if (page === "details") initDetails(); // part 5_NEW
 
+  // Part 5: categories for saved scriptures
+  const CATEGORIES = [
+    "Faith",
+    "Hope",
+    "Love",
+    "Strength",
+    "Comfort",
+    "Guidance"
+  ];
+
+  function getRandomCategory() {
+    var index = Math.floor(Math.random() * CATEGORIES.length);
+    return CATEGORIES[index];
+  }
+
+
   //Home//
   function initHome() {
     var select = document.getElementById("type-select");
@@ -49,15 +65,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btn.addEventListener("click", showOne);
 
-    fetchAll()
-      .then(function (all) {
-        data = all || { bible: [], lds: [] };
-        btn.disabled = false;
-      })
-      .catch(function (err) {
-        console.error("[initHome] fetchAll error:", err);
-        btn.disabled = false;
-      });
+fetchAll()
+  .then(function (all) {
+    data = all || { bible: [], lds: [] };
+
+    // 🔍 DEBUG: See how many scriptures GitHub returned
+    console.log("Bible verses loaded:", data.bible.length);
+    console.log("LDS verses loaded:", data.lds.length);
+
+    btn.disabled = false;
+  })
+  .catch(function (err) {
+    console.error("[initHome] fetchAll error:", err);
+    btn.disabled = false;
+  });
 
     document.addEventListener("click", function (e) {
       var b = e.target;
@@ -77,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: it.title || it.reference || "Inspiration",
             text: it.text || it.quote || "",
             author: it.author || "",
-            reference: it.reference || ""
+            reference: it.reference || "",
+            category: getRandomCategory()   // part 5_ adding category
           });
           b.textContent = "Saved";
           b.disabled = true;
@@ -200,11 +222,15 @@ document.addEventListener("DOMContentLoaded", function () {
           : "")
     +   '<p class="details-text">' + (found.text || "") + "</p>"
     +   (sourceLabel
-      ? '<p class="details-meta"><strong>Source:</strong> ' + sourceLabel + "</p>"
-      : "")
+          ? '<p class="details-meta"><strong>Source:</strong> ' + sourceLabel + "</p>"
+          : "")
     +   (found.author
-      ? '<p class="details-meta"><strong>Author:</strong> ' + found.author + "</p>"
-      : "")
+          ? '<p class="details-meta"><strong>Author:</strong> ' + found.author + "</p>"
+          : "")
+    +   (found.category 
+          ? '<p class="details-meta"><strong>Category:</strong> ' 
+          + found.category + '</p>'
+        : "")
     + "</article>";
     }
     // END of part 5

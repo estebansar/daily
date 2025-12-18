@@ -36,7 +36,7 @@
   margin: 0 auto var(--space);
   padding: 0 var(--space);
   font-size: 1.05rem;
-  opacity: 0.9;
+  opacity: 1;
   line-height: 1.5;
   text-align: left;
 }

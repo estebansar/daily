@@ -56,7 +56,7 @@ textarea {
 #reflection-form button {
   margin-top: 0.5rem;
   padding: 0.6rem;
-  background: var(--accent2);
+  background: var(--primary);
   border: none;
   border-radius: 6px;
   color: white;
@@ -66,7 +66,7 @@ textarea {
 }
 
 #reflection-form button:hover {
-  background: var(--accent1);
+  background: #2f3b2e;
 }
 
 /* Saved reflections as cards */
